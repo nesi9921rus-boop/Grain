@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МебельМастер — изготовление мебели на заказ</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #e67e22;
+      --bg: #f9f9f9;
+      --text: #333;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    header {
+      background: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo { font-weight: bold; font-size: 1.25rem; color: var(--primary); }
+    nav ul { display: flex; gap: 2rem; }
+    nav a { font-weight: 500; color: var(--primary); }
+    nav a:hover { color: var(--accent); }
+
+    .hero {
+      padding: 4rem 1rem;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x600?text=Мебель+на+заказ') no-repeat center/cover;
+      color: #fff;
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #d35400; }
+
+    .section { padding: 3rem 1rem; max-width: 1200px; margin: 0 auto; }
+    h2 { text-align: center; margin-bottom: 2rem; color: var(--primary); }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .card img { width: 100%; height: 240px; object-fit: cover; }
+    .card h3 { padding: 1rem; margin: 0; font-size: 1.1rem; }
+
+    .cta-block {
+      background: var(--primary);
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .cta-block h2 { color: #fff; }
+    .form-group { margin-bottom: 1rem; text-align: left; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .tg-btn {
+      margin-top: 1rem;
+      background: #0088cc;
+      color: #fff !important;
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .tg-btn:hover { background: #006699; }
+
+    footer {
+      background: #222;
+      color: #aaa;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">МебельМастер</div>
+    <nav>
+      <ul>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#gallery">Наши работы</a></li>
+        <li><a href="#order">Вызов мастера</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Мебель на заказ под ваш интерьер</h1>
+    <p>Кухни, шкафы-купе, кровати, гардеробные — делаем точно по размерам и стилю.</p>
+    <br>
+    <a href="#order" class="btn">Вызвать замерщика</a>
+  </section>
+
+  <section id="about" class="section">
+    <h2>Почему выбирают нас</h2>
+    <p style="text-align:center;">
+      Собственное производство, качественные материалы, гарантия 2 года, точные замеры и монтаж. Работаем по договору.
+    </p>
+  </section>
+
+  <section id="gallery" class="section">
+    <h2>Наши работы</h2>
+    <div class="gallery">
+      <!-- Карточки с фото. Замените src на свои файлы -->
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Кухня" alt="Кухня">
+        <h3>Кухня на заказ</h3>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Шкаф" alt="Шкаф-купе">
+        <h3>Шкаф-купе</h3>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Кровать" alt="Кровать">
+        <h3>Кровать с ящиками</h3>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Гардеробная" alt="Гардеробная">
+        <h3>Гардеробная система</h3>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Стол" alt="Стол">
+        <h3>Обеденный стол</h3>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Офис" alt="Офисная мебель">
+        <h3>Офисная мебель</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="cta-block">
+    <h2>Вызвать мастера на замер</h2>
+    <p>Бесплатный выезд, консультация и расчёт стоимости.</p>
+    <form onsubmit="alert('Заявка принята! Мы свяжемся с вами.'); return false;" style="max-width:500px; margin:2rem auto;">
+      <div class="form-group">
+        <label>Ваше имя</label>
+        <input type="text" placeholder="Иван" required>
+      </div>
+      <div class="form-group">
+        <label>Телефон</label>
+        <input type="tel" placeholder="+7 (999) 000-00-00" required>
+      </div>
+      <div class="form-group">
+        <label>Тип мебели</label>
+        <input type="text" placeholder="Например: кухня, шкаф-купе" required>
+      </div>
+      <div class="form-group">
+        <label>Комментарий</label>
+        <textarea rows="3" placeholder="Размеры, стиль, сроки"></textarea>
+      </div>
+      <button type="submit" class="btn" style="width:100%">Отправить заявку</button>
+    </form>
+
+    <!-- Кнопка Telegram -->
+    <a href="https://t.me/ВАШ_НИКНЕЙМ" class="btn tg-btn">
+      💬 Написать в Telegram
+    </a>
+  </section>
+
+  <footer id="contacts">
+    <p>📞 +7 (800) 000-00-00</p>
+    <p>📍 г. Москва, ул. Примерная, д. 1</p>
+    <p>✉️ info@mebelmaster.ru</p>
+    <p>&copy; 2026 МебельМастер. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>
